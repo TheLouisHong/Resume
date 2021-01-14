@@ -1,0 +1,14 @@
+{
+  "name": "louis-hong-resume",
+  "version": "1.0.0",
+  "description": "My Resume Project.",
+  "scripts": {
+    "lite": "lite-server --port 8080",
+    "start": "npm run lite"
+  },
+  "author": "Louis Hong",
+  "license": "",
+  "devDependencies": {
+    "lite-server": "^2.6.1"
+  }
+}
