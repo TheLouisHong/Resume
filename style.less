@@ -1,6 +1,6 @@
-// *:hover{ 
-//    outline:1px blue solid;
-// } 
+*:hover{ 
+   outline:1px blue solid;
+} 
 
 a {
     text-decoration: none;
@@ -20,10 +20,20 @@ body {
     font-weight: 400;
     font-style: normal;
     font-size: 14px;
+    @media (orientation: portrait ) {
+        text-size-adjust: 250%;
+        -webkit-text-size-adjust: 250%;
+    }
+    @media (orientation: landscape ) {
+        text-size-adjust: 125%;
+        -webkit-text-size-adjust: 125%;
+    }
 }
 
 #canvasWrapper {
-    max-width: 1233px;
+    // max-width: 1233px;
+    display: grid;
+    grid-template-columns: 1fr minmax(auto, 71em) 1fr;
 }
 
 #canvas {
@@ -35,14 +45,16 @@ body {
 
 #header {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2,  1fr);
 }
 
 #fullNameHeader {
-    font-size: 72px;
+    font-size: 4.5em;
+    margin-right: 0.25em;
 }
 
 #contactsWrapper {
+
 }
 
 #contactHeader {
@@ -66,26 +78,19 @@ body {
 
 }
 
-#content-block
-{
-    margin-bottom: 12px;
-}
-
 .indent {
-    margin-left: 12px;
-}
-
-#grid-list {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    margin-left: 0px;
 }
 
 ul {
-    margin-top: 4px;
+    margin-top: 0.28em;
+}
+li {
+    margin-top: 0.28em;
 }
 
 h2 {
-    margin-bottom: 6px;
+    margin-bottom: 0.42em;
 }
 
 h3 {
@@ -106,8 +111,20 @@ h3 {
     display: inline;
 }
 
-#skills-wrapper {
-    max-width: 500px;
+#content-block
+{
+    // margin-bottom: 12px;
+}
+
+.skills-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25em, 1fr));
+    // max-width: 600px;
+}
+
+.grid-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(11em, 1fr));
 }
 
 
@@ -171,4 +188,20 @@ h3 {
     -webkit-backface-visibility: hidden;
             backface-visibility: hidden;
     perspective: 1000px;
+}
+
+.dated-content
+{
+    display: grid;
+    grid-template-columns: 1fr 10em;
+}
+
+.dc-content {
+    // max-width: 800px;
+}
+
+.dc-date {
+    float: right;
+    // max-width: 21em;
+    // min-width: 15em;
 }
