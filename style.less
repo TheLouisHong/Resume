@@ -114,8 +114,12 @@ body {
 }
 
 .date {
-    float: right;
     font-weight: bold;
+    float: right;
+    @media (-webkit-min-device-pixel-ratio: 2) 
+    {
+        float: none;
+    }
 }
 
 .city {
@@ -224,5 +228,16 @@ body {
 
 .jobsubtitle {
     color: gray;
-    // font-weight: bold;
+    @media (-webkit-min-device-pixel-ratio: 2) 
+    {
+        display: block;
+
+    }
+}
+
+@media (-webkit-max-device-pixel-ratio: 2) 
+{
+    .jobsubtitle::before {
+        content: "| ";
+    }
 }
