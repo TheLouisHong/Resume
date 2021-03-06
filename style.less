@@ -12,7 +12,7 @@ a {
 
     // ISSUE not ideal, shifts a little depending on mobile orientation
     text-indent: -1.5em;
-    @media (-webkit-min-device-pixel-ratio: 2) 
+    @media only screen and (-webkit-min-device-pixel-ratio: 2) 
     {
         text-indent: -1.35em;
     }
@@ -122,10 +122,6 @@ body {
 .date {
     font-weight: bold;
     float: right;
-    @media (-webkit-min-device-pixel-ratio: 2) 
-    {
-        float: none;
-    }
 }
 
 .city {
@@ -222,26 +218,29 @@ body {
 }
 
 .dc-content {
-    // max-width: 800px;
     margin: 0 0 0 1.5em;
 }
 
 .dc-date {
     float: right;
-    // max-width: 21em;
-    // min-width: 15em;
 }
 
 .jobsubtitle {
     color: gray;
-    @media (-webkit-min-device-pixel-ratio: 2) 
+}
+
+@media only screen and (max-width: 60rem) 
+{
+    .jobsubtitle
     {
         display: block;
+    }
+    .date {
+        float: none;
 
     }
 }
-
-@media (-webkit-max-device-pixel-ratio: 2) 
+@media only screen and (min-width: 60rem) 
 {
     .jobsubtitle::before {
         content: "| ";
