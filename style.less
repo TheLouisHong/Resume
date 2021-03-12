@@ -1,6 +1,8 @@
 // *:hover{ 
 //    outline:1px blue solid;
 // } 
+// div { outline: 1px solid black;}
+
 
 a {
     text-decoration: none;
@@ -64,6 +66,17 @@ body {
         text-size-adjust: 125%;
         -webkit-text-size-adjust: 125%;
     }
+    @media print {
+        font-size: 12px;    
+    }
+}
+
+
+#canvas {
+    padding: 50px 50px 0px 50px;
+    @media print {
+        padding: 25px 25px 0px 25px;
+    }
 }
 
 #canvasWrapper {
@@ -72,9 +85,6 @@ body {
     grid-template-columns: 1fr minmax(auto, 90em) 1fr;
 }
 
-#canvas {
-    padding: 50px;
-}
 
 #headerWrapper {
 }
@@ -261,3 +271,4 @@ body {
         content: "| ";
     }
 }
+
