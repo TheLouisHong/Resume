@@ -144,8 +144,23 @@ body {
 }
 
 .grid-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(14em, 1fr));
+    columns: 2;
+    // display: grid;
+    // grid-template-columns: repeat(auto-fit, minmax(14em, 1fr));
+    // align-items: center;
+}
+
+.level-four::after {
+    content: " - Proficient";
+    color: gray;
+    font-size: 0.70rem;
+
+}
+
+.level-three::after {
+    content: " - Competent";
+    color: grey;
+    font-size: 0.70rem;
 }
 
 
