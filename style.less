@@ -1,12 +1,17 @@
-// *:hover{ 
-//    outline:1px blue solid;
-// } 
-// div { outline: 1px solid black;}
+//  *:hover{ 
+//     outline:1px blue solid;
+//  } 
+//  div { outline: 1px solid black;}
 
 // disable printer margins with CSS
 @page {
   size: auto;  /* auto is the initial value */
   margin: 0mm; /* this affects the margin in the printer settings */
+}
+
+#description
+{
+    padding-top: 0.4em;
 }
 
 a {
@@ -96,12 +101,12 @@ body {
 
 #header {
     display: grid;
-    grid-template-columns: repeat(2,  1fr);
+    grid-template-columns: 2fr 1fr;
     margin-bottom: 1.5em;
 }
 
 #fullNameHeader {
-    font-size: 4.5em;
+    font-size: 2.5em;
     margin-right: 0.25em;
 }
 
